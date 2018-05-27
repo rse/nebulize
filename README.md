@@ -35,7 +35,7 @@ const expect   = require("chai").expect
 
 let ds = new Nebulize()
 ds.filter("**", "foo", "bar")
-expect(ds.sanitize("foo")).to.be.equal("bar")
+expect(ds.nebulize("foo")).to.be.equal("bar")
 ```
 
 License
