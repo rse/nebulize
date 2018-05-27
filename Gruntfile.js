@@ -83,6 +83,12 @@ module.exports = function (grunt) {
                         [ "browserify-derequire" ],
                         [ "browserify-header" ]
                     ],
+                    external: [
+                        "ducky",
+                        "traverse",
+                        "minimatch",
+                        "pure-uuid"
+                    ],
                     browserifyOptions: {
                         standalone: "Nebulize",
                         debug: false
