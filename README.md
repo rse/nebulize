@@ -16,11 +16,11 @@ About
 Nebulize is a small JavaScript library, providing the capability to
 nebulize security-sensitive information in data by anonymization
 (replacing with random-based UUID version 4), pseudonymization
-(replacing with hash-based UUID version 5) or blacking (replacing with
-`#` characters). This nebulization approach is especially intended to
-support applications in their filtering of log messages from sensitive
-information in order to be compliant to the EU General Data Protection
-Regulation (GDPR).
+(replacing with hash-based UUID version 5), blacking (replacing with `#`
+characters) or substitution (replacing with custom characters). This
+nebulization approach is especially intended to support applications in
+their filtering of log messages from sensitive information in order to
+be compliant to the EU [General Data Protection Regulation (GDPR)](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
 
 Installation
 ------------
