@@ -152,6 +152,8 @@ class Nebulize {
             /*  recursively traverse data and conditionally change it  */
             let filters = this.filters
             data = traverse(data).map(function (value) {
+                if (!this.isLeaf)
+                    return
                 filters.forEach((filter) => {
                     if (matchPath(filter.pathMatch, this.path.join("."))) {
                         let { matched, matchings } = matchData(filter.dataMatch, value)
