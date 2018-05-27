@@ -13,11 +13,14 @@ Nebulize Security-Sensitive Information
 About
 -----
 
-Nebulize is a small JavaScript library, providing the capability
-to nebulize security-sensitive information in data. It is especially
-intended to support applications in the filtering of log messages from
-sensitive information in order to be compliant to the EU General Data
-Protection Regulation (GDPR).
+Nebulize is a small JavaScript library, providing the capability to
+nebulize security-sensitive information in data by anonymization
+(replacing with random-based UUID version 4), pseudonymization
+(replacing with hash-based UUID version 5) or blacking (replacing with
+`#` characters). This nebulization approach is especially intended to
+support applications in their filtering of log messages from sensitive
+information in order to be compliant to the EU General Data Protection
+Regulation (GDPR).
 
 Installation
 ------------
