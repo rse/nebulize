@@ -41,6 +41,22 @@ ds.filter("**", "foo", "bar")
 expect(ds.nebulize("foo")).to.be.equal("bar")
 ```
 
+Application Programming Interface (API)
+---------------------------------------
+
+- `new Nebulize(): Nebulize`:<br/>
+  Create a new Nebulize context.
+
+- `Nebulize#filter(pathMatch: string|function,
+  dataMatch: RegExp|string|number|boolean|function,
+  dataReplace: string|number|boolean|function): Nebulize`:<br/>
+  Add a filter to the context.
+
+- `Nebulize#nebulize(data: any): any`:<br/>
+  Nebulize arbitrary data based on filters in context.
+  The `data` is recursively traversed and all filters
+  applied to all leaf data.
+
 License
 -------
 
