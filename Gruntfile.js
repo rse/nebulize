@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                         [ "browserify-header" ]
                     ],
                     browserifyOptions: {
-                        standalone: "DataSanitize",
+                        standalone: "Nebulize",
                         debug: false
                     }
                 }
@@ -84,7 +84,7 @@ module.exports = function (grunt) {
                         [ "browserify-header" ]
                     ],
                     browserifyOptions: {
-                        standalone: "DataSanitize",
+                        standalone: "Nebulize",
                         debug: false
                     }
                 }
