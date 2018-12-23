@@ -1,6 +1,6 @@
 {
     "name":        "nebulize",
-    "version":     "0.9.2",
+    "version":     "0.9.3",
     "description": "Nebulize Security-Sensitive Information",
     "keywords":    [ "data", "nebulize", "security", "sensitive", "information" ],
     "main":        "lib/nebulize.node.js",
