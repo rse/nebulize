@@ -39,6 +39,13 @@ const expect   = require("chai").expect
 let ds = new Nebulize()
 ds.filter("**", "foo", "bar")
 expect(ds.nebulize("foo")).to.be.equal("bar")
+
+let data = {
+    foo: "foo", bar: 42, baz: true,
+    quux: [ "foo", 42, true ],
+    username: "example",
+    password: "secret"
+}
 ```
 
 Application Programming Interface (API)
@@ -50,7 +57,22 @@ Application Programming Interface (API)
 - `Nebulize#filter(pathMatch: string|function,
   dataMatch: RegExp|string|number|boolean|function,
   dataReplace: string|number|boolean|function): Nebulize`:<br/>
-  Add a filter to the context.
+  Add a filter to the context, based on tree parameters:
+
+    - `pathMatch`:<br/>
+      either a Unix glob pattern string or a callback
+      function of signature `(path: string) => boolean`.
+      The callback function receives the path from the root of the `data`
+      object (as passed to method `nebulize()`) to
+      the current nebulized leaf object as a dot-separated
+      path and has to return `true` when the `dataMatch` and
+      `dataReplace` should be applied.
+
+    - `dataMatch`:<br/>
+      FIXME
+
+    - `dataReplace`:<br/>
+      FIXME
 
 - `Nebulize#nebulize(data: any): any`:<br/>
   Nebulize arbitrary data based on filters in context.
