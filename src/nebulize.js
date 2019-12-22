@@ -75,7 +75,7 @@ class Nebulize {
             /*  match data  */
             const matchData = (dataMatch, value) => {
                 let matched = false
-                let matchings = []
+                const matchings = []
                 if (typeof dataMatch === "object" && dataMatch instanceof RegExp) {
                     if (typeof value === "string") {
                         let match
@@ -104,7 +104,7 @@ class Nebulize {
             }
 
             /*  change data  */
-            let anonmap = this.anonmap
+            const anonmap = this.anonmap
             const changeData = (dataReplace, value, matchings) => {
                 let valueNew
                 if (typeof dataReplace === "string") {
@@ -150,15 +150,15 @@ class Nebulize {
             }
 
             /*  recursively traverse data and conditionally change it  */
-            let filters = this.filters
+            const filters = this.filters
             data = traverse(data).map(function (value) {
                 if (!this.isLeaf)
                     return
                 filters.forEach((filter) => {
                     if (matchPath(filter.pathMatch, this.path.join("."))) {
-                        let { matched, matchings } = matchData(filter.dataMatch, value)
+                        const { matched, matchings } = matchData(filter.dataMatch, value)
                         if (matched) {
-                            let valueNew = changeData(filter.dataReplace, value, matchings)
+                            const valueNew = changeData(filter.dataReplace, value, matchings)
                             if (valueNew !== value)
                                 this.update(valueNew)
                         }

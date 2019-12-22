@@ -26,12 +26,12 @@ const Nebulize = require("..")
 
 describe("Nebulize API", () => {
     it("API availability", () => {
-        let ds = new Nebulize()
+        const ds = new Nebulize()
         expect(ds).to.be.a("object")
         expect(ds).to.respondTo("nebulize")
     })
     it("base functionality", () => {
-        let ds = new Nebulize()
+        const ds = new Nebulize()
         ds.filter("", "foo", "bar")
         ds.filter("foo", "foo", "bar")
         ds.filter("bar.baz", "baz", "quux")
@@ -41,7 +41,7 @@ describe("Nebulize API", () => {
             .to.be.deep.equal({ foo: "bar", bar: { baz: "quux" }, quux: 42 })
     })
     it("regexp functionality", () => {
-        let ds = new Nebulize()
+        const ds = new Nebulize()
         ds.filter("", /b.r/, "baz")
         ds.filter("", "pw1", "<P:$0:>")
         ds.filter("", /(pw2)/, "<B:$1:>")
