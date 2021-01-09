@@ -151,6 +151,7 @@ class Nebulize {
 
             /*  recursively traverse data and conditionally change it  */
             const filters = this.filters
+            /* eslint array-callback-return: off */
             data = traverse(data).map(function (value) {
                 if (!this.isLeaf)
                     return
