@@ -30,9 +30,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-eslint")
     grunt.initConfig({
         eslint: {
-            options: {
-                configFile: "eslint.yaml"
-            },
             "nebulize": [ "src/**/*.js", "tst/**/*.js" ]
         },
         browserify: {
