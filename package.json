@@ -20,7 +20,7 @@
     "dependencies": {
         "traverse":               "0.6.11",
         "ducky":                  "2.8.2",
-        "minimatch":              "4.2.4",
+        "minimatch":              "10.2.1",
         "pure-uuid":              "2.0.0"
     },
     "devDependencies": {
